@@ -32,25 +32,15 @@ for line in lines:
             i = i + 1
             document[key] = float(seq[i])
         collection.append(document)
+        url = "https://mndsphrstdntcntst11-cc3f.restdb.io/rest/wj-monitor"
+        payload = json.dumps( {"temperature": tmp,"pressure": p} )
+        headers = {
+            'content-type': "application/json",
+            'x-apikey': "40d3cebafe9b9df70cfa01170a3ad8e1189ab",
+            'cache-control': "no-cache"
+            }
+        response = requests.request("POST", url, data=payload, headers=headers)
+        print(response.text)
         document = {}
-
-
-
-
-
 print(collection)
-
 file.close()
-
-#url = "https://mndsphrstdntcntst11-cc3f.restdb.io/rest/wj-monitor"
-
-# payload = json.dumps( {"temperature": tmp,"pressure": p} )
-# headers = {
-#     'content-type': "application/json",
-#     'x-apikey': "40d3cebafe9b9df70cfa01170a3ad8e1189ab",
-#     'cache-control': "no-cache"
-#     }
-#
-# response = requests.request("POST", url, data=payload, headers=headers)
-#
-# print(response.text)
