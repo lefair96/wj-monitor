@@ -1,0 +1,2 @@
+If in Atom you do PlatformIO > run other target > PIO Upload it gets stuck with the "firmware" chances are that there are devices interferences on the same COM. for me, on COM5 i had both arduino and some bluetooth stuff. I disconnected bluetooth and restarted atom and then everything worked fine
+to make an exe from python: pyinstaller file_name.py
