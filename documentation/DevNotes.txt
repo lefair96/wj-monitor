@@ -1,2 +1,17 @@
 If in Atom you do PlatformIO > run other target > PIO Upload it gets stuck with the "firmware" chances are that there are devices interferences on the same COM. for me, on COM5 i had both arduino and some bluetooth stuff. I disconnected bluetooth and restarted atom and then everything worked fine
 to make an exe from python: pyinstaller file_name.py
+
+I used a cronjob to run automatically the python opc ua server. It is to note that
+it takes some time for the mango to boot up and connect to a network
+so you need to add a delay to start opcUA serv (actually
+it would be better to code a script that before opening opcua Server
+it awaits for the mango to be up)
+
+crontab -e
+@reboot sleep 180 && python /usr/local/src/opcUA-Serv.py &
+the final & makes the program run in background
+
+ps -ef | grep python
+pgrep -lf python
+ps -aux | grep python
+to check what python processes are running
