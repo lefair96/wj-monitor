@@ -1,8 +1,8 @@
 [Servers]
-0\Name=mango PC
+0\Name=Cobot
 0\Connected=true
 0\ProjectServerId=0
-0\ServerUrl=opc.tcp://192.168.8.211:4840/freeopcua/server/
+0\ServerUrl=opc.tcp://192.168.1.10:4840/freeopcua/server/
 0\Server.ApplicationUri=
 0\Server.ProductUri=
 0\Server.ApplicationNameLocale=
@@ -17,7 +17,7 @@
 0\NoOfUserIdentityTokens=0
 0\TransportProfileUri=
 0\SecurityLevel=0
-0\DisplayName=mango PC
+0\DisplayName=Cobot
 0\ReverseConnect=false
 0\ClientEndpointUrl=
 0\UserTokenType=0
